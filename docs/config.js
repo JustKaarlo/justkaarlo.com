@@ -1,17 +1,38 @@
 const docs = [
     {
-        title: 'ArmA3',
+        title: 'Miscellaneous',
         subtitle: 'Documentation',
-        icon: 'https://www.justkaarlo.com/res/icons/arma3.ico',
-        link: 'https://www.justkaarlo.com/docs/arma3',
+        icon: '../res/icons/sparkle.ico',
+        link: '',
         contentType: 'link'
     },
+    // { // ACE
+    //     type: 'section',
+    //     title: 'ACE',
+    //     subtitle: '━━━━━━━'
+    // },
     {
-        title: 'Gray Zone Warfare',
-        subtitle: 'Documentation',
-        icon: 'https://www.justkaarlo.com/res/icons/grayzone.ico',
-        link: 'https://www.justkaarlo.com/docs/grayzone',
-        contentType: 'link'
+        type: 'category',
+        title: 'Games',
+        subtitle: 'Documentation for Games',
+        icon: '',
+        collapsed: true,
+        guides: [
+            {
+                title: 'ArmA3',
+                subtitle: 'Documentation',
+                icon: 'https://www.justkaarlo.com/res/icons/arma3.ico',
+                link: 'https://www.justkaarlo.com/docs/arma3',
+                contentType: 'link'
+            },
+            {
+                title: 'Gray Zone Warfare',
+                subtitle: 'Documentation',
+                icon: 'https://www.justkaarlo.com/res/icons/grayzone.ico',
+                link: 'https://www.justkaarlo.com/docs/grayzone',
+                contentType: 'link'
+            },
+        ]
     },
 ];
 
@@ -22,6 +43,26 @@ const mods = [
         icon: 'https://www.justkaarlo.com/res/icons/eldenring.ico',
         link: 'https://www.justkaarlo.com/mods/elden-ring',
         contentType: 'link'
+    },
+];
+
+const miscGuides = [
+    {
+        title: 'Example',
+        subtitle: 'Link',
+        icon: '../res/icons/sparkle.ico',
+        link: 'https://www.justkaarlo.com/res/icons/sparkle.ico',
+        contentType: 'link'
+    },
+    {
+        title: 'Example',
+        subtitle: 'Description',
+        icon: '../res/icons/sparkle.ico',
+        contentType: 'description',
+        showTOC: false,
+        description: `
+            <p>Hello World</p>
+        `,
     },
 ];
 
@@ -596,6 +637,7 @@ const GuideConfigs = {
     main: guides,
     arma3: arma3Guides,
     grayzone: gzwGuides,
+    misc: miscGuides,
     mods: mods,
     docs: docs,
 

@@ -70,6 +70,13 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
         url('../res/images/arma3.png');
 }
+#bg-misc {
+    opacity: 1;
+    background:
+        linear-gradient(rgba(160, 160, 160, 0.08), rgba(160, 160, 160, 0.08)),
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+        url('../res/core/images/cubewaves.webp');
+}
 
 #bg-grayzone {
     position: fixed;
