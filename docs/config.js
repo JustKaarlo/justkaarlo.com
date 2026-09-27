@@ -3,7 +3,7 @@ const docs = [
         title: 'Miscellaneous',
         subtitle: 'Documentation',
         icon: '../res/icons/sparkle.ico',
-        link: '',
+        link: 'https://www.justkaarlo.com/docs/misc',
         contentType: 'link'
     },
     // { // ACE
