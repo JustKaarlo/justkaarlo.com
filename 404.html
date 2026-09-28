@@ -64,12 +64,13 @@
       background-repeat: repeat;
       background-size: 30%;
       background-attachment: fixed;
+      background-size: cover;
       z-index: 0;
       pointer-events: none;
       filter: grayscale(100%);
       background-image:
           linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-          url('res/core/style/fakebricks-large.webp');
+          url('res/core/images/cubewaves.webp');
   }
 
     #particles-js {
@@ -81,17 +82,15 @@
 
     .error-container {
       border-radius: 20px;
-      padding: 3rem;
+      padding: 1rem;
       text-align: center;
-      max-width: 400px;
-      width: 90%;
-      backdrop-filter: blur(0.7px);
+      width: 300px;
+      backdrop-filter: blur(0.2px);
       font-family: "Geist Mono", monospace;
       font-weight: 600;
       color: #e6e7eb4f;
-      background: linear-gradient(rgba(22,22,22,0.2), rgba(14,14,14,0.4));
-      border: 1px solid rgba(255,255,255,0.06);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.08);
+      background: linear-gradient(rgba(22,22,22,0.1), rgba(14,14,14,0.2));
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08);
       transition: all 300ms ease;
     }
 
@@ -100,12 +99,16 @@
       font-weight: bold;
       color: #ff4c4c;
       margin-bottom: 1rem;
+      margin-left: 50px;
+      margin-right: 50px;
+      padding: 5px;
+      padding-top: 25px;
     }
 
     .error-message {
       font-size: 1.2rem;
       margin-bottom: 2rem;
-      color: #e6e7ebc0;
+      color: #e1e2e7;
     }
 
     .btn {
@@ -115,7 +118,7 @@
         border-radius: 16px;
         padding: 12px 15px;
         font-size: 1.1rem;
-        font-weight: 800;
+        font-weight: 600;
         letter-spacing: 0.4px;
         display: inline-flex;
         align-items: center;
@@ -123,22 +126,20 @@
         text-decoration: none;
         cursor: pointer;
         font-family: "Geist Mono", monospace;
-        background: linear-gradient(180deg, rgba(110, 110, 110, 0.2), rgba(151, 151, 151, 0.164));
+        background: linear-gradient(180deg, rgba(110, 110, 110, 0.05), rgba(151, 151, 151, 0.08));
         border: 1px solid rgba(0, 0, 0, 0.1);
         color: #e6e7eb;
         transition: all 150ms ease;
     }
 
     .btn:hover {
-      background: linear-gradient(180deg, rgba(110, 110, 110, 0.4), rgba(151, 151, 151, 0.2));
+      background: linear-gradient(180deg, rgba(110, 110, 110, 0.095), rgba(151, 151, 151, 0.095));
       border: 1px solid rgba(36, 36, 36, 0.3);
       transform: translateY(-1px);
-      box-shadow: 0 2px 6px rgba(95, 95, 95, 0.15);
     }
 
     .btn svg {
         display: block;
-        margin: 0 auto;
     }
   </style>
 </head>
@@ -151,12 +152,12 @@
       </svg>
     </div>
     <div class="error-message">Page Not Found</div>
-      <a class="btn" href="home" aria-label="Home">
+      <a class="btn" href="https://www.justkaarlo.com/home" aria-label="Home">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512" fill="currentColor">
             <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
             </path>
         </svg>
-        Back
+        Go Back
       </a>
   </div>
 
