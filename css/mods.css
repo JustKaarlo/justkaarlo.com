@@ -53,6 +53,15 @@ body {
         linear-gradient(var(--er-overlay-2), var(--er-overlay-2)),
         url('../res/images/elden-ring.png');
 }
+#bg-ds2 {
+    opacity: 1;
+    /* background-repeat: repeat; */
+    background-size: cover;
+    background-image:
+        linear-gradient(var(--er-overlay-1), var(--er-overlay-1)),
+        linear-gradient(var(--er-overlay-2), var(--er-overlay-2)),
+        url('../res/images/darksouls2.png');
+}
 
 #particles-js {
     position: fixed;
