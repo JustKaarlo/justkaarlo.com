@@ -44,13 +44,13 @@ const mods = [
         link: 'https://www.justkaarlo.com/mods/elden-ring',
         contentType: 'link'
     },
-    {
-        title: 'Dark Souls II',
-        subtitle: 'Collection List',
-        icon: 'https://www.justkaarlo.com/res/icons/darksouls2.ico',
-        link: 'https://www.justkaarlo.com/mods/darksouls-2',
-        contentType: 'link'
-    },
+    // {
+    //     title: 'Dark Souls II',
+    //     subtitle: 'Collection List',
+    //     icon: 'https://www.justkaarlo.com/res/icons/darksouls2.ico',
+    //     link: 'https://www.justkaarlo.com/mods/darksouls-2',
+    //     contentType: 'link'
+    // },
 ];
 
 const miscGuides = [
