@@ -78,6 +78,14 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
         url('../res/core/images/cubewaves.webp');
 }
 
+#bg-roblox {
+    opacity: 0.35;
+    background:
+        linear-gradient(rgba(160, 160, 160, 0.08), rgba(160, 160, 160, 0.08)),
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+        url('../res/images/roblox.png');
+}
+
 #bg-grayzone {
     position: fixed;
     inset: 0;
