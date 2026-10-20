@@ -21,400 +21,42 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+
     <style>
-        .guides-container {
-            position: relative;
-            overflow: scroll;
-            border-radius: 16px;
-            border: 0;
-            box-shadow: 0;
-            border: 0px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
-            background: rgba(63, 63, 63, 0.25);
-            backdrop-filter: brightness(0.75) blur(3px);
-            max-width: 1100px !important;
-            min-width: 900px !important;
-            width: fit-content !important;
-        }
-        /* .guides-container::before {
-            content: "";
+        .disclaimer {
+            font-family: 'Rubik', sans-serif;
+            display: flex;
+            align-items: center;
+            max-width: fit-content;
+            margin: 0 auto;
+            padding: 0.75rem 1rem;
+            background: rgba(24, 24, 24, 0.451);
+            backdrop-filter: blur(1px);
+            border-radius: 12px;
+            font-size: 12px;
+            line-height: 1.3;
+            color: #999;
+            gap: 0.75rem;
             position: absolute;
-            inset: 0;
-            background-blend-mode: saturation;
-            background:
-                -webkit-linear-gradient(120deg, rgba(155, 189, 21, 0.15) 0%, rgba(155, 189, 21, 0.2) 100%),
-                url("https://www.justkaarlo.com/res/bg/bgBasicGrid.png") top 50% left 50% / cover no-repeat;
-            filter: blur(1px) opacity(85%);
-            z-index: 0;
-            border: 1px solid rgba(61, 61, 61, 0.57);
-            box-shadow: 0 1px 24px rgba(0, 0, 0, 0.6);
-        } */
-        .guides-container > * {
-            position: relative;
-            z-index: 1;
-        }
-        .guide-button {
-            position: relative;
-            overflow: hidden;
-            background-blend-mode: saturation;
-            border: 2px solid rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-            transition: all 0.2s ease;
-        }
-        .guides-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 12px;
-        }
-        .guide-description .btn-action {
-            background: rgba(34, 34, 34, 0.6);
-            color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        .guide-description .btn-action:hover {
-            background: rgba(48, 48, 48, 0.6);
-            transform: translateY(-2px);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            color: #ffffff;
-        }
-        .guide-description .btn-action:active {
-            transform: translateY(0px);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        .guide-description code {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.9em;
-            color: #dfdfdf;
-            font-weight: 600;
-        }
-        .guide-description h6 {
-            font-size: 14px;
-            font-weight: normal;
-            color: #d0d0d0;
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            font-style: italic !important;
-        }
-        .toc-item {
-            border-left-color: rgba(255,255,255,0.08);
-        }
-        .toc-item:hover {
-            border-left-color: rgba(255,255,255,0.08);
-        }
-        span.text-gray#small {
-            font-size: 13px !important;
-            cursor: auto !important;
-            user-select: text !important;
-        }
-        span#small {
-            line-height: 1 !important;
-        }
-        .guide-description .tab-btn.active {
-            color: #d1d1d1;
-            border-bottom-color: #a3a3a3;
-            background: rgba(128, 128, 128, 0.15);
-        }
-        .guide-description div.dropdown-icon svg {
-            fill: rgba(163, 163, 163, 1) !important;
-        }
-        .guide-description a.card-link {
-            border-color: rgba(101, 101, 101, 0.2) !important;
-        }
-        .guide-description a.card-link:hover {
-            border-color: rgba(163, 163, 163, 0.1) !important;
-        }
-        .guide-description img.ammo {
-            height: auto;
-            width: 54px;
-            margin-bottom: 0px;
-            margin-top: 0px;
-            background-color: transparent;
-            box-shadow: none;
-        }
-        a.btn-action.btn-small#gzw-btn-1 {
-            background-color: #ffc500;
-            color: #000000;
-            border-color: #ffc500;
-            padding: 4px 8px;
-            font-size: 13px;
-            font-weight: 900;
-        }
-        a.btn-action.btn-small#gzw-btn-1:hover {
-            border-color: #ffc500;
-        }
-        span.text-small {
-            font-size: 13px;
-        }
-        span.font-size-14 {
-            font-size: 14px;
-        }
-        span.font-size-16 {
-            font-size: 16px;
-        }
-        span.font-size-18 {
-            font-size: 18px;
-        }
-        span.text-medium-header {
-            font-size: 18px;
-            margin-top: -15px !important;
-        }
-        span.text-small.gzw-exp {
-            font-size: 13px;
-            color: #ffc500;
-        }
-        span.text-small.gzw-rep {
-            font-size: 13px;
-            color: #008000;
-            font-weight: 900;
-        }
-        span.text-small.gzw-gray {
-            font-size: 11px;
-            color: rgb(113, 113, 113);
+            bottom: 500px;
+            left: 50%;
+            transform: translateX(-50%);
             font-weight: 700;
         }
-        span.text-tiny.gzw-gray {
-            position: sticky;
+
+        .disclaimer-icon-custom {
             display: flex;
-            margin-bottom: -10px;
-            font-size: 8px;
-            color: rgb(113, 113, 113);
-            font-weight: 500;
-            font-style: italic;
-        }
-        span.text-gzw-1 {
-            color: #ffc500;
-        }
-        span.text-gzw-2 {
-            color: #e0e0e0;
-        }
-        span.text-gzw-weight-600 {
-            font-weight: 600;
-        }
-        span.text-gzw-weight-500 {
-            font-weight: 500;
-        }
-        span.text-gzw-weight-400 {
-            font-weight: 400;
-        }
-        span.text-gzw-weight-300 {
-            font-weight: 300;
-        }
-        span.text-gzw-font-1 {
-            font-family: 'Twemoji Country Flags', Poppins, sans-serif !important;
-        }
-        div#guideDescription.guide-description {
-            max-width: 100% !important;
-        }
-        div.modal-width-container-max {
-            display: inline-block !important;
-            width: 1000px !important;
-        }
-        div.modal-width-container-spec-1 {
-            display: inline-block !important;
-            width: 1414px !important;
-        }
-        div.modal-width-container-mid {
-            display: inline-block !important;
-            width: 700px !important;
-        }
-        div img.image-small {
-            width: 112px;
-            height: 10%;
-        }
-        div img.image-24x24 {
-            width: 24px !important;
-            height: 24px !important;
-            display: inline;
-            margin: 0px 6px -5px 2px !important;
-            box-shadow: none;
-        }
-        .guide-description img.image-28x28 {
-            width: 28px !important;
-            height: 28px !important;
-            display: inline;
-            margin: 0 4px -7px 2px !important;
-            box-shadow: none;
-        }
-        div img.image-32x32 {
-            width: 32px !important;
-            height: 32px !important;
-            display: inline;
-            margin: 0 4px -7px 2px !important;
-            box-shadow: none;
-        }
-        div img.image-24x24-x2 {
-            width: 28px !important;
-            height: 28px !important;
-            display: inline;
-            /* margin: 0px 3px 0px -3px !important; */
-            margin: 10px;
-            box-shadow: none;
-        }
-        .guide-description .tab-list.task-types .tab-btn {
-            padding: 6px 8px !important;
-            font-weight: 500;
-            font-size: 0.8em !important;
-            border-bottom-color: rgba(255, 197, 0, 0.6);
-            color: rgba(255, 197, 0, 0.85);
-        }
-        span.text-medium-header.gzw {
-            color: #ffc500;
-        }
-        span.text-medium-header.main {
-            color: #f7f329;
-        }
-        span.text-medium-header.side {
-            color: #008aef;
-        }
-        span.text-medium-header.contract {
-            color: #10eb8c;
-        }
-        .box.box-gzw {
-            background-color: rgba(255, 197, 0, 0.1);
-            border-color: rgba(255, 197, 0, 0.25);
-        }
-        .badge.badge-gzw {
-            background-color: rgba(255, 197, 0, 0.1);
-            border-color: rgba(255, 197, 0, 0.25);
-            color: rgba(255, 197, 0, 0.8);
-        }
-        .guide-description .callout-gzw-1 {
-            border-left-color: #ffc500;
-            background: rgba(58, 58, 58, 0.22);
-        }
-        .guide-description a.gzw {
-            color: #ffc500;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        .guide-description a.gzw:hover {
-            color: rgba(255, 196, 0, 0.8);
-        }
-
-        .toc-item.toc-h1 .toc-item-label { margin-left: 2px; }
-        .toc-item.toc-h1 {
-            font-size: 15px;
-            font-weight: 500;
-            margin-top: 15px;
-        }
-        .toc-item.toc-h2 .toc-item-label { margin-left: -5px; }
-        .toc-item.toc-h2 {
-            font-size: 14px;
-            font-weight: 500;
-            margin-left: 5px;
-        }
-        .toc-item.toc-h3 .toc-item-label { margin-left: -15px; }
-        .toc-item.toc-h3 {
-            font-size: 13px;
-            font-weight: 400;
-            margin-left: 10px;
-        }
-        .toc-item.toc-h4 .toc-item-label { margin-left: -25px; }
-        .toc-item.toc-h4 {
-            font-size: 12px;
-            font-weight: 300;
-            margin-left: 15px;
-        }
-        .toc-item.toc-h5 .toc-item-label { margin-left: -40px; }
-        .toc-item.toc-h5 {
-            font-size: 11px;
-            font-weight: 200;
-            margin-left: 20px;
-        }
-        .toc-item.toc-h6 .toc-item-label { margin-left: -50px; }
-        .toc-item.toc-h6 {
-            font-size: 11px;
-            font-weight: 100;
-            font-style: italic;
-            margin-left: 25px;
-        }
-        .guide-description .btn-action-gzw {
-            display: inline-block;
-            padding: 6px 12px;
-            margin: 10px 5px;
-            color: #ffffff;
-            text-decoration: none;
-            border: none;
-            border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: rgba(255, 197, 0, 0.7);
-            box-shadow: 0 3px 2px rgba(255, 197, 0, 0.1);
-        }
-        .guide-description .btn-action-gzw:hover {
-            background: rgba(255, 197, 0, 0.8);
-            box-shadow: 0 3px 3px rgba(255, 197, 0, 0.2);
-            transform: translateY(-2px);
-            color: #ffffff;
-        }
-        .guide-description .btn-action-gzw:active {
-            transform: translateY(0px);
-            box-shadow: 0 3px 3px rgba(255, 197, 0, 0.2);
-        }
-
-        .badge.badge-s,
-        .badge.badge-a,
-        .badge.badge-b,
-        .badge.badge-c,
-        .badge.badge-d,
-        .badge.badge-e,
-        .badge.badge-f {
-            color: #ffffff;
-            font-size: 15px;
-            padding: 1px 3px 1px 3px;
-        }
-        .badge.badge-s {
-            background-color: rgba(255, 127, 127, 0.65);
-        }
-        .badge.badge-a {
-            background-color: rgba(255, 191, 127, 0.65);
-        }
-        .badge.badge-b {
-            background-color: rgba(255, 223, 127, 0.65);
-        }
-        .badge.badge-c {
-            background-color: rgba(255, 255, 127, 0.65);
-        }
-        .badge.badge-d {
-            background-color: rgba(191, 255, 127, 0.65);
-        }
-        .badge.badge-e {
-            background-color: rgba(127, 255, 127, 0.65);
-        }
-        .badge.badge-f {
-            background-color: rgba(133, 133, 133, 0.65);
-        }
-        .guide-description .card {
-            padding: 12px;
-        }
-        span.spacer {
-            display: block;
-            position: relative;
-        }
-        span.t5 {
-            margin-top: 5px !important;
-        }
-        span.t10 {
-            margin-top: 10px !important;
-        }
-        span.t20 {
-            margin-top: 20px !important;
-        }
-        span.t30 {
-            margin-top: 30px !important;
-        }
-        span.frame-gzw-1 {
-            padding: 2% 4%;
-            border: 1px solid rgba(133, 133, 133, 0.05);
-            border-radius: 8px;
-            background: rgba(66, 66, 66, 0.4);
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border: 2px solid rgba(120, 120, 120, 0.5);
+            border-radius: 50%;
+            color: rgba(140, 140, 140, 0.7);
+            font-weight: bold;
+            font-size: 18px;
+            opacity: 0.5;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -450,65 +92,20 @@
         <img class="game-icon" style="width: auto;"
             src="../res/logos/grayzone-logo.png"
             alt="Gray Zone Warfare"/>
-        <div class="guides-container">
-            <div class="guides-grid" id="gzwGuidesGrid">
-                <!-- Guide buttons will be dynamically generated here -->
-            </div>
-        </div>
-    </div>
 
-    <!-- Guide Modal -->
-    <div id="guideModal" class="guide-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="modal-title" id="modalTitle">Gray Zone Warfare</span>
-                <div class="modal-header-actions">
-                    <button id="tocButton" class="toc-button" style="display: none;" onclick="toggleTOC()">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/>
-                        </svg>
-                    </button>
-                    <a id="guideLink" href="#" target="_blank" class="guide-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="rgba(160, 160, 160, 0.7)" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" fill="none"></path>
-                        </svg>
-                    </a>
-                    <button class="close-button" onclick="closeGuide()">×</button>
-                </div>
-            </div>
-            
-            <!-- Table of Contents Panel -->
-            <div id="tocPanel" class="toc-panel">
-                <div class="toc-header">
-                    <span class="toc-title">Table of Contents</span>
-                    <button class="toc-close" onclick="toggleTOC()">×</button>
-                </div>
-                <div id="tocContent" class="toc-content">
-                    <!-- TOC will be generated here -->
-                </div>
-            </div>
-            <div class="modal-body">
-                <!-- Image content -->
-                <img id="guideImage" class="guide-image" src="" alt="Guide">
-                
-                <!-- Description content -->
-                <div id="guideDescription" class="guide-description">
-                    <!-- Formatted content will be inserted here -->
-                </div>
+        <div class="disclaimer">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-label="error" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title fill="#F5F5F5">error</title>
+                <path d="M12.001.504a11.5 11.5 0 1 0 11.5 11.5 11.513 11.513 0 0 0-11.5-11.5Zm0 21a9.5 9.5 0 1 1 9.5-9.5 9.51 9.51 0 0 1-9.5 9.5Zm0-6.594a1.279 1.279 0 1 0 1.278 1.279A1.28 1.28 0 0 0 12 14.91Zm0-8.443a1.326 1.326 0 0 0-.97.412 1.154 1.154 0 0 0-.313.872l.362 5.057a.928.928 0 0 0 1.84 0l.363-5.057a1.152 1.152 0 0 0-.313-.871 1.323 1.323 0 0 0-.97-.413Z" fill="#626262c2"></path>
+            </svg>
+            <div>
+                Latest Version Unsupported<br>
+                         Work In Progress
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="../docs/config.js"></script>
-    <script src="../js/docs.js"></script>
     <script>
-        function closeGuide() {
-            GuideSystem.closeModal();
-            const url = window.location.href.split('#')[0];
-            history.replaceState(null, '', url);
-        }
 
         // Initialize particles
         particlesJS('particles-js', {
@@ -524,9 +121,6 @@
             interactivity: { detect_on: 'canvas', events: { onhover: { enable: false }, onclick: { enable: false }, resize: true } },
             retina_detect: true
         });
-
-        // Initialize
-        initializeGuidePage('gzwGuidesGrid', gzwGuides);
     </script>
 </body>
 </html>
