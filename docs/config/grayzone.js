@@ -1,87 +1,76 @@
 const gzwGuides = [
     {
-        title: 'Acquire New Weapons',
+        title: 'Best Ammunition By Caliber',
         subtitle: '<b><span class="text-gzw-1small">Rogue Ops 0.5</span>(WIP)',
-        icon: 'https://www.justkaarlo.com/res/core/icons/assault-rifle.png',
-        link: 'https://share.google/aimode/SamaX4H7jOhQ0v8mM',
+        icon: 'https://www.justkaarlo.com/res/core/icons/bullet.png',
+        link: 'https://chatgpt.com/s/t_6ad7d3b6875c8191a962ed9ddac4dc04',
         contentType: 'description',
         showTOC: true,
         description: `
             <span data-toc="Top" data-toc-level="h2"></span>
-            <img src="https://www.justkaarlo.com/res/assets/banners/weapons.png" alt="Banner">
+            <img src="https://www.justkaarlo.com/res/assets/grayzone/banners/ballistics.png" alt="Banner">
             <div class="box">
-                Update 0.4 & 0.5, new weapons, special variants, and weapon blueprints/schematics<br>
-                are <a class="gzw">primarily found and looted out in the open world of Lamang</a> rather than purchased<br>
-                directly from vendors
+                The rankings below are provisional because the available ballistics database<br>
+                is still marked v0.4, rather than confirmed 0.5 data.
             </div>
-            <hr>
-            <h3>How to Acquire New Weapons and Schematics</h3>
-            <div class="callout callout-gzw-1">
-                <div class="callout-body">
-                    <b><span class="text-gzw-1">Locate the Item in the World</span></b><br>
-                      Explore specific high-tier or themed points of interest (such as military bases,<br>
-                      tourist shelters, hotels, and northern outposts) where specific weapons or<br>
-                      blueprint magazines/schematics spawn on tables, shelves, or the ground.
-                    <br>
-                    <b><span class="text-gzw-1">Interact to Trigger Tasks/Collection</span></b><br>
-                      For blueprint/schematic items, pick up the item and interact with it (often twice—once<br>
-                      to inspect and once to place it in your inventory/backpack) to trigger a special task
-                    <br>
-                    <b><span class="text-gzw-1">Extract and Turn In</span></b><br>
-                      Return safely to your base camp or turn the schematic/item in to unlock the<br>
-                      corresponding weapon or camo/part options for future use or purchase
+            <div >
+            <div class="only-cards cards-1">
+                <div class="card">
+                    <div class="card-title"><h4 style="margin-top: -2px; margin-bottom: -14px;">Sources</h4></div>
+                    <span class="spacer t15"></span>
+                    <a href="https://www.itechguides.com/gray-zone-warfare-weapons-and-ammo-guide-penetration-calibers-and-loadouts-update-0-5"><span class="badge">ITechGuides</span></a> <a href="https://www.grayzonewarfare.net/ballistics"><span class="badge">GZW|NET Ballistics</span></a>
                 </div>
-            </div>
+                <br>
             <hr>
         `,
     },
-    {
-        title: 'Mines & Tripwires',
-        subtitle: 'Handy-Notes',
-        icon: 'https://www.justkaarlo.com/res/core/icons/tripmine.png',
-        contentType: 'description',
-        showTOC: true,
-        description: `
-            <span data-toc="Top" data-toc-level="h2"></span>
-            <img src="https://www.justkaarlo.com/res/assets/banners/mines.png" alt="Banner">
-            <div class="box">
-                Mines and tripwires are environmental hazards that cause instant death or trigger traps.<br>
-                They are placed around Main Operating Bases, major Combat Outposts, specific mission areas<br>
-                (like the Troll Bridge west of Tiger Bay), and are randomly hidden on paths near campsites.
-            </div>
-            <hr>
-            <h2>Locations</h2>
-            <div class="callout callout-gzw-1">
-                <div class="callout-body">
-                    <b><span class="text-gzw-1">Main Bases & COPs</span></b><br>
-                      Automatically triggered if an enemy player attempts to breach or bypass the main base entrances.
-                    <br>
-                    <b><span class="text-gzw-1">Mission Areas</span></b><br>
-                      Known missions like "Troll Bridge" feature explicitly trapped/mined bridges leading to objective areas.
-                    <br>
-                    <b><span class="text-gzw-1">Randomized Tripwires</span></b><br>
-                      Scattered around LLA areas, campsites, and hidden docks (e.g., near Ban Pa)
-                </div>
-            </div>
-            <hr>
-            <h2>How to Survive & Defuse</h2>
-            <div class="callout callout-gzw-1">
-                <div class="callout-body">
-                    <b><span class="text-gzw-1">Tripwires</span></b><br>
-                      You can hear a distinct "click" when walking through them. If you hear it,<br>
-                      sprint away immediately.
-                    <br>
-                    <b><span class="text-gzw-1">Defusing</span></b><br>
-                      If equipped with a Multitool, you can crouch down, look directly at the wire<br>
-                      or a stick, and hold the interact key to safely disarm it.
-                    <br>
-                    <b><span class="text-gzw-1">Map Awareness</span></b><br>
-                      Because traps are incredibly difficult to spot in the brush, it is highly recommended to<br>
-                      use the <a class="gzw" href="https://mapgenie.io/gray-zone-warfare">Gray Zone Warfare Map on MapGenie</a> to check boundaries and avoid known danger zones.
-                </div>
-            </div>
-        `,
-    },
+    // {
+    //     title: 'Mines & Tripwires',
+    //     subtitle: 'Handy-Notes',
+    //     icon: 'https://www.justkaarlo.com/res/core/icons/tripmine.png',
+    //     contentType: 'description',
+    //     showTOC: true,
+    //     description: `
+    //         <span data-toc="Top" data-toc-level="h2"></span>
+    //         <img src="https://www.justkaarlo.com/res/assets/banners/mines.png" alt="Banner">
+    //         <div class="box">
+    //             Mines and tripwires are environmental hazards that cause instant death or trigger traps.<br>
+    //             They are placed around Main Operating Bases, major Combat Outposts, specific mission areas<br>
+    //             (like the Troll Bridge west of Tiger Bay), and are randomly hidden on paths near campsites.
+    //         </div>
+    //         <hr>
+    //         <h2>Locations</h2>
+    //         <div class="callout callout-gzw-1">
+    //             <div class="callout-body">
+    //                 <b><span class="text-gzw-1">Main Bases & COPs</span></b><br>
+    //                   Automatically triggered if an enemy player attempts to breach or bypass the main base entrances.
+    //                 <br>
+    //                 <b><span class="text-gzw-1">Mission Areas</span></b><br>
+    //                   Known missions like "Troll Bridge" feature explicitly trapped/mined bridges leading to objective areas.
+    //                 <br>
+    //                 <b><span class="text-gzw-1">Randomized Tripwires</span></b><br>
+    //                   Scattered around LLA areas, campsites, and hidden docks (e.g., near Ban Pa)
+    //             </div>
+    //         </div>
+    //         <hr>
+    //         <h2>How to Survive & Defuse</h2>
+    //         <div class="callout callout-gzw-1">
+    //             <div class="callout-body">
+    //                 <b><span class="text-gzw-1">Tripwires</span></b><br>
+    //                   You can hear a distinct "click" when walking through them. If you hear it,<br>
+    //                   sprint away immediately.
+    //                 <br>
+    //                 <b><span class="text-gzw-1">Defusing</span></b><br>
+    //                   If equipped with a Multitool, you can crouch down, look directly at the wire<br>
+    //                   or a stick, and hold the interact key to safely disarm it.
+    //                 <br>
+    //                 <b><span class="text-gzw-1">Map Awareness</span></b><br>
+    //                   Because traps are incredibly difficult to spot in the brush, it is highly recommended to<br>
+    //                   use the <a class="gzw" href="https://mapgenie.io/gray-zone-warfare">Gray Zone Warfare Map on MapGenie</a> to check boundaries and avoid known danger zones.
+    //             </div>
+    //         </div>
+    //     `,
+    // },
     // {
     //     type: 'section',
     //     title: 'Resources',
@@ -101,7 +90,7 @@ const gzwGuides = [
     //             <b>List the top ammunition to use for each caliber.</b>
     //         </div>
     //         <hr>
-    //         <div class="cards cards-2">
+    //         <div class="cards cards-1">
     //             <div class="card">
     //                 <div class="card-title"><h4 style="margin-top: -2px; margin-bottom: -14px;">5.56x45mm</h4></div>
     //                 <div class="card-body">

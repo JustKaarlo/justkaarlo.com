@@ -1932,13 +1932,18 @@ pre.sqf-code {
     gap: 16px;
     margin: 5px 0;
 }
-.guide-description .cards-1 { grid-template-columns: repeat(1, 0.5fr); }
-.guide-description .cards-2 { grid-template-columns: repeat(2, 0.5fr); }
-.guide-description .cards-3 { grid-template-columns: repeat(3, 0.5fr); }
-.guide-description .cards-4 { grid-template-columns: repeat(4, 0.5fr); }
-.guide-description .cards-5 { grid-template-columns: repeat(5, 0.5fr); }
-.guide-description .cards-6 { grid-template-columns: repeat(6, 0.5fr); }
-.guide-description .cards-7 { grid-template-columns: repeat(7, 0.5fr); }
+.guide-description .line-cards {
+    display: grid;
+    margin: 5px 0;
+}
+
+.guide-description .cards.cards-1 { grid-template-columns: repeat(1, 0.5fr); }
+.guide-description .cards.cards-2 { grid-template-columns: repeat(2, 0.5fr); }
+.guide-description .cards.cards-3 { grid-template-columns: repeat(3, 0.5fr); }
+.guide-description .cards.cards-4 { grid-template-columns: repeat(4, 0.5fr); }
+.guide-description .cards.cards-5 { grid-template-columns: repeat(5, 0.5fr); }
+.guide-description .cards.cards-6 { grid-template-columns: repeat(6, 0.5fr); }
+.guide-description .cards.cards-7 { grid-template-columns: repeat(7, 0.5fr); }
 
 .guide-description .card {
     background: rgba(255, 255, 255, 0.04);
@@ -2220,6 +2225,17 @@ pre.sqf-code {
     background: rgba(255, 255, 255, 0.1);
     color: rgba(210, 210, 210, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.12);
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+.guide-description .badge:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.45);
+    transform: translateY(-1px);
 }
 
 .guide-description .badge-info    { background: rgba(85,153,255,0.14); color: #88aaff; border-color: rgba(85,153,255,0.28); }
