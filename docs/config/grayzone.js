@@ -1,6 +1,6 @@
 const gzwGuides = [
     {
-        title: 'Acquire New Weapons ',
+        title: 'Acquire New Weapons',
         subtitle: '<b><span class="text-gzw-1small">Rogue Ops 0.5</span>(WIP)',
         icon: 'https://www.justkaarlo.com/res/core/icons/assault-rifle.png',
         link: 'https://share.google/aimode/SamaX4H7jOhQ0v8mM',
@@ -15,7 +15,7 @@ const gzwGuides = [
                 directly from vendors
             </div>
             <hr>
-            <h3>How to Acquire New Weapons and Schematics</h2>
+            <h3>How to Acquire New Weapons and Schematics</h3>
             <div class="callout callout-gzw-1">
                 <div class="callout-body">
                     <b><span class="text-gzw-1">Locate the Item in the World</span></b><br>
