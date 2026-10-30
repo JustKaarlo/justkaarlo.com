@@ -17,6 +17,51 @@ const GuideSystem = {
             .trim();
     },
     
+    // Automatically index each modal by its title
+    setModalIdentity(title) {
+        const modal = document.getElementById('guideModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('guideDescription');
+
+        if (!modal || !modalTitle) return;
+
+        const slug = this.titleToSlug(title) || 'untitled';
+
+        // Remove previously generated modal classes
+        modal.classList.forEach(className => {
+            if (className.startsWith('modal-') &&
+                className !== 'modal-open') {
+                modal.classList.remove(className);
+            }
+        });
+
+        // Index the entire modal
+        modal.dataset.modalTitle = title;
+        modal.dataset.modalId = slug;
+        modal.classList.add(`modal-${slug}`);
+
+        // Index the header container
+        const header = modalTitle.parentElement;
+
+        if (header) {
+            header.dataset.modalTitle = title;
+            header.dataset.modalId = slug;
+            header.classList.add(`modal-header-${slug}`);
+        }
+
+        // Index the title
+        modalTitle.dataset.modalTitle = title;
+        modalTitle.dataset.modalId = slug;
+        modalTitle.classList.add(`modal-title-${slug}`);
+
+        // Index the content
+        if (modalContent) {
+            modalContent.dataset.modalTitle = title;
+            modalContent.dataset.modalId = slug;
+            modalContent.classList.add(`modal-content-${slug}`);
+        }
+    },
+
     // Open a guide based on its index
     openGuide(guideIndex) {
         const guide = this.currentGuides[guideIndex];
@@ -46,6 +91,7 @@ const GuideSystem = {
         const guideDescription = document.getElementById('guideDescription');
         const guideLink = document.getElementById('guideLink');
 
+        this.setModalIdentity(guide.title);
         modalTitle.textContent = guide.title;
         
         // Show image, hide description
@@ -76,6 +122,7 @@ const GuideSystem = {
         const tocButton = document.getElementById('tocButton');
         const tocPanel = document.getElementById('tocPanel');
 
+        this.setModalIdentity(guide.title);
         modalTitle.textContent = guide.title;
         this.currentGuideSlug = this.titleToSlug(guide.title);
         guideDescription.innerHTML = guide.description;
