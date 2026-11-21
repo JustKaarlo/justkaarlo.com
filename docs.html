@@ -209,25 +209,26 @@
         }
 
         .guide-category-header {
-            background:
-                linear-gradient(rgba(21, 21, 21, 0.8), rgba(21, 21, 21, 0.6)),
+            background: rgba(27, 27, 27, 0.5);
+                /* linear-gradient(rgba(21, 21, 21, 0.8), rgba(21, 21, 21, 0.6)), */
                 /* linear-gradient(rgba(84, 84, 84, 0.15), rgba(84, 84, 84, 0.2)), */
-                linear-gradient(rgba(104, 104, 104, 0.3), rgba(104, 104, 104, 0.2)),
-                url('res/core/style/sofa.webp') no-repeat center/cover !important;
-            border-color: transparent !important;
+                /* linear-gradient(rgba(104, 104, 104, 0.3), rgba(104, 104, 104, 0.2)), */
+                /* url('res/core/style/sofa.webp') no-repeat center/cover !important; */
+            border: 2px solid rgba(255, 255, 255, 0.05) !important;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-            transition: all 0.35s ease;
+            transition: all 0.2s ease;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 700;
             color: rgba(177, 177, 177, 0.3) !important;
         }
         .guide-category-header:hover {
-            transform: translateY(-0.8px) scale(1.005);
-            background:
-                linear-gradient(rgba(21, 21, 21, 0.8), rgba(21, 21, 21, 0.6)),
-                linear-gradient(rgba(104, 104, 104, 0.4), rgba(104, 104, 104, 0.3)),
-                url('res/core/style/sofa.webp') no-repeat center/cover !important;
+            transform: perspective(1000px) rotateX(-0.560191deg) rotateY(0.484761deg) scale(1.008);
+            background: rgba(62, 62, 62, 0.2);
+                /* linear-gradient(rgba(21, 21, 21, 0.55), rgba(21, 21, 21, 0.45)), */
+                /* linear-gradient(rgba(104, 104, 104, 0.6), rgba(104, 104, 104, 0.2)), */
+                /* url('res/core/style/sofa.webp') no-repeat center/cover !important; */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.05) !important;
         }
         .guide-category-arrow {
             font-size: 12px;
@@ -253,13 +254,15 @@
             font-weight: 800;
             letter-spacing: 0.75px;
             margin-top: 1px;
-            font-size-adjust: 0.55;
+            font-size-adjust: 0.65;
             color: rgba(177, 177, 177, 0.65);
+            text-transform: uppercase;
+            font-optical-sizing: auto;
         }
         .guide-category-content {
             display: grid;
             /* grid-template-columns: repeat(auto-fill, (2, 1fr)); */
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr) !important;
         }
     </style>
 </head>
