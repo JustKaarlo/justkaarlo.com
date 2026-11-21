@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -55,13 +56,57 @@
         .github-frame {
             background:
                 linear-gradient(rgba(22,22,22,0.2), rgba(14,14,14,0.4)),
-                rgba(11, 11, 11, 0.155) url('res/core/style/fakebricks-min.svg') repeat center/55% !important;
+                rgba(11, 11, 11, 0.155) url('res/core/images/abstract-cards-50-60.png') repeat right/76% !important;
         }
         :root {
             --grid-size: 24px;
             --grid-color: rgba(105, 105, 105, 0.301);
         }
         .nav-divider { width: 24px; height: 1px; background: rgba(255, 255, 255, .14); margin: 1px 0; }
+
+        .misc-links {
+            box-sizing: border-box;
+            align-self: center;
+            min-width: auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 8px;
+            padding: 10.5px 8px;
+            border: 1px solid rgba(39, 39, 39, 0.32);
+            border-radius: 12px;
+            background: linear-gradient(rgba(22,22,22,0.2), rgba(14,14,14,0.4));
+        }
+
+        .misc-links .workshop-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 6px;
+            box-sizing: border-box;
+            width: min-content;
+            max-width: 100%;
+            height: auto;
+            min-height: 32px;
+            padding: 5px 10px;
+            font-size: .8125rem;
+            font-weight: 600;
+            line-height: 1.25;
+            color: #e5e5e5a7;
+            text-decoration: none;
+            overflow-wrap: normal;
+            filter: brightness(1.02);
+        }
+        .misc-links .btn-icon {
+            width: 16px;
+            height: 16px;
+            flex: none; 
+            opacity: 90%;
+        }
+        .misc-links a:focus-visible {
+            outline: 1px solid #eee;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 
@@ -88,11 +133,10 @@
                     </svg>
                     <div class="nav-tooltip">Documentation</div>
                 </a>
-                <a href="../collections" target="_self" class="nav-btn white" aria-label="Collections">
+                <a class="nav-btn" id="UnableNavBtn" aria-label="Collections">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="1 0 20 20">
                         <image height="20" width="20" href="res/core/favicons/collections.ico" />
                     </svg>
-                    <div class="nav-tooltip">Collections (WIP)</div>
                 </a>
             </nav>
         </header>
@@ -153,6 +197,19 @@
                     <button class="github-btn" id="github-open-modal">View Changes</button>
                 </div>
             </div>
+
+            <nav class="misc-links glass">
+                <a class="workshop-btn has-tooltip" href="https://www.justkaarlo.com/url/imageye">
+                    <img class="btn-icon" src="https://www.justkaarlo.com/res/ui/128x128/imageye-128x128.png" alt="">
+                    <div class="card-tooltip">Imageye</div>
+                    <span>Imageye</span>
+                </a>
+                <a class="workshop-btn has-tooltip" href="https://docs.justkaarlo.com">
+                    <img class="btn-icon" src="https://www.justkaarlo.com/res/ui/128x128/gitbook-128x128.png" alt="">
+                    <div class="card-tooltip">Gitbook</div>
+                    <span>Gitbook</span>
+                </a>
+            </nav>
         </div>
     </div>
 
@@ -169,6 +226,8 @@
             </div>
         </div>
     </div>
+
+
 
     <footer class="footer">
         <p><b>&copy; 2026 JustKaarlo</b>. All rights reserved.</p>

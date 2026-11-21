@@ -157,6 +157,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     cursor: not-allowed;
     transform: translateY(-1px);
 }
+#UnableNavBtn {
+    background: rgba(151, 151, 151, 0.1);
+    border: 1px solid rgba(36, 36, 36, 0.15);
+    color: #999;
+    box-shadow: 0 2px 6px rgba(95, 95, 95, 0.1);
+    cursor: not-allowed;
+    transform: translateY(-1px);
+    opacity: 70%;
+}
 
 /* Tooltips */
 .nav-tooltip {
